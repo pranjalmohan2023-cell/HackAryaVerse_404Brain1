@@ -1,0 +1,549 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Custom scrollbar for industrial terminal aesthetic */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0a0a0f;
+  border: 1px solid #1f1f2a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #00d9ff;
+  border: 1px solid #1f1f2a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00b8d4;
+}
+
+/* CRT Scanline effect for alive terminal feel */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.crt-scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(transparent, rgba(0, 217, 255, 0.1), transparent);
+  pointer-events: none;
+  animation: scanline 8s linear infinite;
+  z-index: 9999;
+}
+
+/* Screen flicker for damaged terminal */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  41.99% { opacity: 1; }
+  42% { opacity: 0.8; }
+  43% { opacity: 1; }
+  45.99% { opacity: 1; }
+  46% { opacity: 0.9; }
+  46.5% { opacity: 1; }
+}
+
+.terminal-flicker {
+  animation: flicker 7s infinite;
+}
+
+/* Data glitch effect for EMP interference */
+@keyframes data-glitch {
+  0%, 90%, 100% { 
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  92% { 
+    transform: translate(-2px, 1px);
+    filter: hue-rotate(90deg);
+  }
+  94% { 
+    transform: translate(2px, -1px);
+    filter: hue-rotate(-90deg);
+  }
+  96% { 
+    transform: translate(-1px, 2px);
+  }
+}
+
+.emp-glitch {
+  animation: data-glitch 3s infinite;
+}
+
+/* Bolt/rivet corner details */
+.corner-bolts::before,
+.corner-bolts::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #3a3a4a 40%, #1f1f2a 70%, transparent);
+  border-radius: 50%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.corner-bolts::before {
+  top: 8px;
+  left: 8px;
+}
+
+.corner-bolts::after {
+  top: 8px;
+  right: 8px;
+}
+
+/* Power consumption indicator pulse */
+@keyframes power-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(0, 217, 255, 0.5);
+  }
+  50% { 
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+  }
+}
+
+.power-indicator {
+  animation: power-pulse 2s ease-in-out infinite;
+}
+
+/* Hazard stripes */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 184, 71, 0.1) 10px,
+    rgba(255, 184, 71, 0.1) 20px
+  );
+}
+
+/* Screen vignette for worn display */
+.screen-vignette {
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+}
+
+/* Advanced Holographic Effects */
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.hologram {
+  position: relative;
+  animation: hologram-flicker 0.15s infinite;
+}
+
+.hologram::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 217, 255, 0.03) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Scanning Effect */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+.scan-effect {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scan-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 217, 255, 0.1),
+    transparent
+  );
+  animation: scan 3s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+/* Particle Field */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(212, 105, 106, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-float linear infinite;
+}
+
+/* Glowing borders */
+@keyframes border-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px currentColor, inset 0 0 5px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 20px currentColor, inset 0 0 10px currentColor;
+  }
+}
+
+.glow-border {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+/* Data stream effect */
+@keyframes data-stream {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.data-stream {
+  animation: data-stream 2s linear infinite;
+}
+
+/* Advanced text glitch */
+@keyframes text-glitch {
+  0% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(90deg);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    filter: hue-rotate(180deg);
+  }
+  60% {
+    transform: translate(2px, 2px);
+    filter: hue-rotate(270deg);
+  }
+  80% {
+    transform: translate(2px, -2px);
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.text-glitch {
+  animation: text-glitch 0.3s infinite;
+}
+
+/* 3D Panel depth */
+.panel-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.panel-3d-inner {
+  transform: translateZ(20px);
+  transition: transform 0.3s ease;
+}
+
+.panel-3d:hover .panel-3d-inner {
+  transform: translateZ(30px);
+}
+
+/* Circuit pattern background */
+.circuit-bg {
+  background-image: 
+    linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Boot sequence */
+@keyframes boot-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.boot-animation {
+  animation: boot-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Chromatic aberration */
+.chromatic {
+  position: relative;
+}
+
+.chromatic::before,
+.chromatic::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.chromatic::before {
+  color: #ff2e4c;
+  transform: translate(-1px, 0);
+  clip-path: inset(0 50% 0 0);
+}
+
+.chromatic::after {
+  color: #00d9ff;
+  transform: translate(1px, 0);
+  clip-path: inset(0 0 0 50%);
+}
+
+/* Radar sweep */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Energy pulse rings */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Advanced hover effects */
+.interactive-panel {
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.interactive-panel:hover {
+  border-color: var(--tactical-cyan);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+.interactive-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+/* LCD grid overlay */
+.lcd-grid {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 217, 255, 0.015) 1px,
+      rgba(0, 217, 255, 0.015) 2px
+    );
+}
+
+/* Glitch bars */
+@keyframes glitch-bar {
+  0% {
+    transform: scaleX(0);
+    left: 0;
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+    left: 100%;
+  }
+}
+
+.glitch-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.glitch-bar {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: rgba(0, 217, 255, 0.5);
+  animation: glitch-bar 3s linear infinite;
+  top: var(--top, 50%);
+  transform-origin: left;
+}
+
+/* Range Slider Styling */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--tactical-cyan);
+  cursor: pointer;
+  border: 2px solid var(--panel-dark);
+  box-shadow: 0 0 10px var(--tactical-cyan);
+  transition: all 0.2s;
+}
+
+input[type="range"].slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 20px var(--tactical-cyan);
+  transform: scale(1.1);
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--tactical-cyan);
+  cursor: pointer;
+  border: 2px solid var(--panel-dark);
+  box-shadow: 0 0 10px var(--tactical-cyan);
+  transition: all 0.2s;
+}
+
+input[type="range"].slider::-moz-range-thumb:hover {
+  box-shadow: 0 0 20px var(--tactical-cyan);
+  transform: scale(1.1);
+}
+
+/* Optimized panel spacing for professional layout */
+.panel-container {
+  margin: 0;
+  padding: 12px 16px;
+}
+
+/* Remove default margins from grid layouts */
+.grid {
+  gap: 0;
+}
+
+/* Tighter component spacing */
+.component-wrapper > * {
+  margin-bottom: 0;
+}
+
+/* Professional dashboard layout - minimal gaps */
+.dashboard-grid {
+  display: grid;
+  gap: 0;
+  width: 100%;
+}
+
+/* Ensure panels fill their containers */
+.panel-fill {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Seamless grid borders - share borders between adjacent cells */
+.grid > * {
+  margin-top: -2px;
+  margin-left: -2px;
+}
+
+.grid > *:first-child {
+  margin-left: 0;
+}
+
+/* Remove all default spacing from components */
+.seamless-component {
+  margin: 0 !important;
+  padding: 0;
+}
+
+/* Ensure all grid items connect perfectly */
+@media (min-width: 1280px) {
+  .xl\\:grid-cols-3 > * {
+    margin-top: -2px;
+  }
+  
+  .xl\\:grid-cols-3 > *:nth-child(-n+3) {
+    margin-top: 0;
+  }
+  
+  .xl\\:grid-cols-3 > *:nth-child(3n+1) {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,292 @@
+Design and generate a modern full-stack web platform called "TruthGuard AI" for detecting AI-generated or manipulated media including images, videos, audio, and text.
+
+The design should be professional, futuristic, clean, and visually stunning, comparable to products like OpenAI, RunwayML, Vercel dashboards, and Linear.app.
+
+The generated output should include:
+
+• Complete UI design
+• Full React + Tailwind frontend code
+• Organized folder structure
+• Ready-to-run project with Vite + React + TypeScript + Tailwind CSS
+• No broken imports or missing dependencies
+• Code that runs immediately with
+
+npm install
+npm run dev
+
+without requiring manual fixes.
+
+Platform Purpose
+
+The platform allows users to upload or input media and determine whether it is:
+
+• AI generated
+• Deepfake
+• Manipulated
+• Authentic / Real
+
+The system should support four detection pipelines:
+
+Image Deepfake Detection
+
+Video Deepfake Detection
+
+Audio Voice Clone Detection
+
+AI-Generated Text Detection
+
+Detection Parameters the System Must Consider
+
+The UI and system design should reflect these analysis signals.
+
+Image Analysis
+
+Detect AI-generated images using:
+
+• GAN artifact detection
+• pixel frequency spectrum analysis
+• abnormal lighting or shadow inconsistencies
+• unnatural eye reflections
+• texture repetition patterns
+• facial landmark distortion
+• diffusion model fingerprints
+• metadata inconsistencies
+
+Display:
+
+• heatmap of manipulated regions
+• authenticity probability score
+• confidence percentage
+
+Video Analysis
+
+Analyze videos using:
+
+• frame-by-frame facial consistency
+• temporal facial landmark drift
+• lip-sync mismatch detection
+• blinking pattern anomalies
+• head pose irregularities
+• GAN temporal artifacts
+• deepfake compression signatures
+
+Display:
+
+• timeline chart of suspicious frames
+• probability score per frame
+• manipulated region overlay
+
+Audio Analysis
+
+Detect AI voice cloning using:
+
+• spectrogram inconsistencies
+• unnatural pitch modulation
+• prosody irregularities
+• harmonic distortion patterns
+• synthetic waveform artifacts
+• voice biometrics mismatch
+
+Display:
+
+• spectrogram visualization
+• authenticity probability
+• waveform anomaly markers
+
+Text Analysis
+
+Detect AI-generated text using:
+
+• perplexity distribution
+• burstiness patterns
+• entropy score
+• stylometric fingerprinting
+• linguistic repetition structures
+• transformer probability patterns
+
+Display:
+
+• AI likelihood score
+• suspicious segments highlighted
+
+Core Features
+
+The platform should include:
+
+Authentication
+
+• Sign up
+• Login
+• Secure session handling
+
+Dashboard
+
+Show user statistics:
+
+• total analyses
+• deepfake detections
+• risk score
+• monthly usage
+
+New Analysis Page
+
+Allow user to upload:
+
+• images
+• videos
+• audio files
+• text input
+
+Include:
+
+• drag and drop upload
+• preview window
+• analyze button
+
+Analysis Results Page
+
+Show:
+
+• authenticity score
+• AI probability meter
+• manipulated region highlights
+• explanation of why it is detected
+
+History Page
+
+Show previous analyses with:
+
+• media preview
+• score
+• timestamp
+• type (image/video/audio/text)
+
+Analytics Page
+
+Visualize:
+
+• detection statistics
+• trends
+• charts
+
+Reports Page
+
+Allow exporting results as:
+
+• PDF
+• JSON
+
+UI Design Requirements
+
+Design must be modern, dark themed, and elegant.
+
+Use:
+
+• glassmorphism panels
+• gradient highlights
+• subtle motion animations
+• modern iconography
+• minimal but powerful layout
+
+Inspiration:
+
+• Vercel dashboard
+• Linear.app
+• OpenAI interface
+• Apple developer tools
+
+Visual Components
+
+Include:
+
+• Sidebar navigation
+• Dashboard cards
+• File upload dropzone
+• analysis progress animation
+• authenticity meter gauge
+• timeline graphs
+• result heatmaps
+
+Technical Requirements
+
+Generate code with:
+
+Frontend:
+
+• React
+• TypeScript
+• TailwindCSS
+• Framer Motion
+• Lucide icons
+
+Backend simulation:
+
+• API routes for detection pipelines
+
+Structure project like:
+
+src
+ ├ app
+ │ ├ components
+ │ ├ pages
+ │ ├ analysis
+ │ └ ui
+ ├ lib
+ ├ styles
+ └ api
+Important Code Requirements
+
+The generated code must:
+
+• include all imports
+• include React imports where needed
+• include Tailwind configuration
+• include PostCSS config
+• include package.json dependencies
+• avoid undefined variables
+• avoid broken paths
+
+The project must run immediately after cloning using:
+
+npm install
+npm run dev
+
+with no manual fixes required.
+
+Additional AI Features
+
+Add smart UI elements such as:
+
+• AI confidence gauge
+• manipulation heatmap viewer
+• deepfake timeline graph
+• spectral analyzer visualization
+
+Bonus Features
+
+Include optional features:
+
+• batch analysis
+• API integration
+• dataset training dashboard
+
+Deliverables
+
+Provide:
+
+Figma UI design
+
+Exportable React code
+
+Fully structured project
+
+Ready-to-run development environment
+
+Expected User Flow
+
+User logs in → uploads media → system analyzes → dashboard shows results → user downloads report.
+
+Platform Name
+
+TruthGuard AI
+Tagline: Multi-Spectrum Deepfake Detection

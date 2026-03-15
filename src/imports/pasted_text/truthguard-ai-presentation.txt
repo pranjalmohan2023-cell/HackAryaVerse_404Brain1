@@ -1,0 +1,291 @@
+Design a professional, futuristic technical presentation deck for a project called TruthGuard AI – Multi-Spectrum Deepfake Detection System.
+The presentation should look like a cybersecurity research presentation for government and industry stakeholders, not like a startup pitch.
+
+The design style should be:
+
+• Dark cyber-security theme
+• Blue / purple gradient accents
+• Glassmorphism cards
+• Data visualization heavy
+• Clean technical diagrams
+• Flowcharts and architecture diagrams
+• Modern AI / cybersecurity aesthetic
+
+Include icons, graphs, and animated visual explanations.
+
+Slide 1 — Title Slide
+
+Title:
+
+TruthGuard AI
+Multi-Spectrum Deepfake Detection Platform
+
+Subtitle:
+
+AI-Powered Detection of Synthetic Media
+(Image, Video, Audio, and Text)
+
+Include:
+
+• AI shield logo
+• futuristic background
+• subtle neural network graphics
+
+Slide 2 — Problem Statement
+
+Explain the problem of AI-generated misinformation and deepfakes.
+
+Show visual examples:
+
+• fake political speech
+• AI-generated celebrity images
+• synthetic voice scams
+• AI-written misinformation
+
+Add statistics such as:
+
+Deepfake content is increasing exponentially across social media platforms.
+
+Slide 3 — Industry Relevance
+
+Show industries affected:
+
+• Government security
+• Cybercrime investigation
+• Media verification
+• Election protection
+• Social media moderation
+
+Use a sector impact diagram.
+
+Slide 4 — Our Solution
+
+Introduce the system:
+
+TruthGuard AI detects whether media is AI-generated using multi-signal forensic analysis.
+
+Key capabilities:
+
+Image detection
+Video detection
+Audio detection
+Text detection
+Metadata analysis
+Government threat monitoring
+
+Show a system overview diagram.
+
+Slide 5 — System Workflow (Flow Diagram)
+
+Create a clear pipeline diagram.
+
+Flow:
+
+User Upload Media
+↓
+Media Preprocessing
+↓
+Feature Extraction
+↓
+AI Detection Models
+↓
+Forensic Signal Analysis
+↓
+Probability Calculation
+↓
+Threat Assessment
+↓
+Government Monitoring System
+
+Use a modern architecture flowchart.
+
+Slide 6 — Multi-Spectrum Detection
+
+Explain how different media types are analyzed.
+
+Create four columns:
+
+IMAGE
+VIDEO
+AUDIO
+TEXT
+
+Under each show detection methods.
+
+Image:
+
+• GAN artifact detection
+• frequency spectrum analysis
+• EXIF metadata validation
+
+Video:
+
+• temporal frame analysis
+• lip-sync consistency
+• motion anomalies
+
+Audio:
+
+• spectrogram anomaly detection
+• voice synthesis artifacts
+
+Text:
+
+• language model perplexity
+• stylistic fingerprinting
+
+Slide 7 — AI Probability Calculation
+
+Visualize how the system calculates AI probability.
+
+Show formula:
+
+AI Probability =
+0.6 × Deep Learning Model Score
+
+0.2 × Metadata Forensics Score
+
+0.2 × Frequency Spectrum Score
+
+Provide example:
+
+CNN Detection Score = 0.80
+Metadata Score = 0.65
+Frequency Score = 0.70
+
+Final AI Probability = 0.75 (75%)
+
+Display this as a data flow diagram with numerical calculation blocks.
+
+Slide 8 — Metadata Forensics
+
+Explain EXIF analysis.
+
+Show example metadata extraction:
+
+Camera Model
+Timestamp
+Software Used
+GPS Coordinates
+
+Example anomaly detection:
+
+Missing camera metadata
+Editing software detected
+Timestamp mismatch
+
+Display metadata authenticity score.
+
+Slide 9 — Threat Level Calculation (Government Module)
+
+Explain how misinformation risk is calculated.
+
+Formula:
+
+Threat Score =
+AI Probability × Virality Score × Sensitivity Score
+
+Example:
+
+AI Probability = 0.82
+Virality Score = 0.75
+Sensitivity Score = 0.90
+
+Threat Score = 0.55
+Threat Level = HIGH
+
+Show visualization using gauge charts.
+
+Slide 10 — Government Monitoring System
+
+Explain how governments can monitor misinformation.
+
+Include:
+
+• Real-time deepfake detection feed
+• threat prioritization dashboard
+• incident tracking system
+• automated alerts
+
+Show a cybersecurity operations center style dashboard.
+
+Slide 11 — National Misinformation Heatmap
+
+Display a map of India.
+
+Color zones based on threat level:
+
+Red → high misinformation spread
+Yellow → moderate risk
+Green → safe
+
+Show live incident markers.
+
+Slide 12 — Technical Architecture
+
+Create a system architecture diagram.
+
+Flow:
+
+Frontend Interface (React)
+↓
+API Layer
+↓
+AI Detection Engine
+↓
+Forensic Analysis Modules
+↓
+Threat Scoring Engine
+↓
+Government Monitoring Dashboard
+
+Include icons for each layer.
+
+Slide 13 — Impact & Practical Use
+
+Explain benefits.
+
+Government:
+
+misinformation monitoring
+election protection
+
+Media platforms:
+
+automated deepfake detection
+
+Public safety:
+
+fake content identification
+
+Slide 14 — Demo Workflow
+
+Show how the system works.
+
+Step-by-step diagram:
+
+Upload media
+↓
+System analyzes signals
+↓
+AI probability calculated
+↓
+Threat level generated
+↓
+Action recommendation displayed
+
+Slide 15 — Conclusion
+
+TruthGuard AI provides a multi-layer forensic detection system capable of identifying AI-generated media and assessing misinformation risk for government and industry use.
+
+Extra Instruction for Figma
+
+Ensure the presentation includes:
+
+• flow diagrams
+• probability calculation visuals
+• technical architecture diagrams
+• charts and graphs
+• cyber security theme visuals
+
+Slides should be minimal text, highly visual, and technically explanatory.
